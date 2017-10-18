@@ -14,7 +14,7 @@ class Lsf
   end
 
   def submit_job(command,options = {})
-    @defaults.each do |k,v|
+    defaults.each do |k,v|
       options[k] = v unless options[k]
     end
     # Reject any options that won't be accepted by bsub
